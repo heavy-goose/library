@@ -1,0 +1,215 @@
+:root {
+    font-family: "Cutive", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: 100px 1fr 40px;
+}
+
+.header {
+    background-color: lightslategray;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 0 150px 0 40px;
+    align-items: center;
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 2.5rem;
+    color: whitesmoke;
+    letter-spacing: 5px;
+}
+
+.add-btn {
+    padding: 15px 30px;
+    font-family: inherit;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    font-size: 1.3rem;
+    font-weight: 300;
+    box-shadow: 1px 2px 3px rgb(65, 65, 65);
+}
+
+.main {
+    background-color: lightgray;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+    padding: 40px;
+    max-height: calc(100vh - 140px);
+    overflow-y: scroll;
+}
+
+.card {
+    background-color: white;
+    max-width: 400px;
+    text-align: center;
+    display: grid;
+    border: 5px solid black;
+    grid-template-rows: 30px 1.5fr repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
+    padding: 0 20px 15px 20px;
+    padding-bottom: 10px;
+    box-shadow: 1px 2px 3px rgb(65, 65, 65);
+}
+
+
+.remove-book {
+    grid-area: 1 / 2;
+    width: 30px;
+    place-self: end;
+    position: relative;
+    left: 20px;
+}
+
+.card-title {
+    grid-area: 2 / 1 / 3 / 3;
+    align-self: center;
+    justify-self: left;
+    text-align: start;
+}
+
+.card-author {
+    grid-area: 3 / 1 / 4 / 3;
+    text-align: end;
+    margin-left: 30px;
+}
+
+.card-pages {
+    grid-area: 4 / 1 / 5 / 2;
+    color:rgba(65, 65, 65, 0.521);
+    font-size: 0.9rem;
+}
+
+.card-pub-date {
+    grid-area: 4 / 2 / 5 / 3;
+    color:rgba(65, 65, 65, 0.521);
+    font-size: 0.9rem;
+}
+
+.card-status {
+    grid-area: 5 / 1 / 6 / 3;
+    place-self: center;
+    border-radius: 1px;
+    padding: 10px 30px 5px;
+    color:rgb(80, 80, 80);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+
+.card-status.unread {
+    outline:rgba(204, 139, 150, 0.671) 2px solid;
+    border:rgba(255, 182, 193, 0.671) 4px solid;
+    color: rgba(204, 139, 150, 0.671);
+}
+
+.card-status.reading {    
+    outline:rgb(70, 162, 190) 2px solid;
+    border:rgb(84, 199, 235) 4px solid;
+    color: rgb(70, 162, 190);
+}
+
+.card-status.read {
+    outline:rgb(9, 167, 159) 2px solid;
+    border:rgb(17, 184, 175) 4px solid;
+    color: rgb(9, 167, 159);
+}
+
+
+
+.footer {
+    background-color: lightslategray;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    font-size: 0.8rem;
+    color: lightgray;
+    
+}
+
+.footer a {
+    text-decoration: none;
+    color: lightgray;
+}
+.footer a:hover {
+    text-decoration: none;
+    color: rgb(92, 92, 92);
+}
+
+
+.modal {
+    padding: 20px;
+    border: 5px solid black;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin: auto;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.modal-header > h2 {
+    margin: 0;
+}
+
+.close-btn {
+    width: 30px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form label {
+    place-self: end;
+}
+
+.radio-row {
+    grid-column: 2 span;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.radio-row p {    
+    text-align: center;
+}
+
+.radio-center {
+    display: flex;
+    justify-content: space-around;
+}
+
+.submit-btn {
+    grid-column: 2 span;
+    padding: 15px 30px;
+    font-family: inherit;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    font-size: 1.3rem;
+    font-weight: 300;
+    box-shadow: 1px 2px 3px rgb(65, 65, 65);
+}

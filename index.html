@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive&family=Gravitas+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>My Library</h1>
+        <button class="add-btn">Add new book</button>
+    </div>
+    <div class="main">
+        
+    </div>
+    <div class="footer">
+        <p><a href="https://github.com/heavy-goose">by heavy-goose</a></p>
+    </div>
+
+    <dialog class="modal" id="modal">
+
+        <div class="modal-header">
+            <h2>Add a new book</h2>
+            <svg class="close-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>close-box-outline</title><path d="M19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M19,19H5V5H19V19M17,8.4L13.4,12L17,15.6L15.6,17L12,13.4L8.4,17L7,15.6L10.6,12L7,8.4L8.4,7L12,10.6L15.6,7L17,8.4Z" /></svg>
+        </div>
+            
+        <form class="form" method="dialog">
+            <label for="new-title">Title</label>
+            <input type="text" id="new-title" value="unknown" required>
+
+            <label for="new-author">Author</label>
+            <input type="text" id="new-author" value="unknown" placeholder="" required>
+
+            <label for="new-pages">Pages</label>
+            <input type="tel" id="new-pages" value="?" required>
+
+            <label for="new-pub">Publication year</label>
+            <input type="year" id="new-pub" value="unknown" required>
+
+            <div class="radio-row">
+                <p>Read Status</p>
+                <div class="radio-center">
+                    <label>
+                        <input type="radio" name="status" value="unread">unread
+                    </label>
+                    
+                    <label>
+                        <input type="radio" name="status" value="reading">reading
+                    </label>
+                    <label>
+                        <input type="radio" name="status" value="read">read
+                    </label>
+                </div>
+            </div>
+
+            <button class="submit-btn" type="submit">Add book</button>
+        </form>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
