@@ -22,6 +22,30 @@ let statusButtons;
 const addButton = document.querySelector(".add-btn");
 const closeButton = document.querySelector(".close-btn");
 const modal = document.querySelector("#modal");
+const submitButton = document.querySelector(".submit-btn");
+const form = document.querySelector(".form");
+
+submitButton.addEventListener("click", (e) => {
+    
+    let titleValue = document.querySelector("#new-title").value;
+    let authorValue = document.querySelector("#new-author").value;
+    let pagesValue = document.querySelector("#new-pages").value;
+    let pubValue = document.querySelector("#new-pub").value;
+    let selectedRadioButton = Array.from(document.querySelectorAll("[name=status]")).filter(element => element.checked)[0];
+
+    addBookToLibrary(titleValue, authorValue, pagesValue, pubValue, selectedRadioButton.value);
+
+    titleValue = "";
+    authorValue = "";
+    pagesValue = "";
+    pubValue = "";
+    selectedRadioButton = false;
+    form.reset();
+    modal.close();
+    displayLibrary();
+    e.preventDefault();
+})
+
 
 addButton.addEventListener("click", () => {
     modal.showModal();
