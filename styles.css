@@ -31,13 +31,25 @@ h1 {
 }
 
 .add-btn {
-    padding: 15px 30px;
+    padding: 15px 30px 10px;
     font-family: inherit;
     background-color: whitesmoke;
     border-radius: 4px;
     font-size: 1.3rem;
     font-weight: 300;
     box-shadow: 1px 2px 3px rgb(65, 65, 65);
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    font-weight: bold;
+    border: 4px solid black;
+}
+
+.add-btn:active {
+    background-color: lightgrey;
+    font-weight: normal;
+    border: 2px solid black;
 }
 
 .main {
@@ -49,6 +61,7 @@ h1 {
     padding: 40px;
     max-height: calc(100vh - 140px);
     overflow-y: scroll;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.288) inset;
 }
 
 .card {
@@ -64,13 +77,36 @@ h1 {
     box-shadow: 1px 2px 3px rgb(65, 65, 65);
 }
 
+.card:has(.card-status.unread) {
+    box-shadow: 1px 1px 10px rgba(202, 91, 109, 0.623);
+}
 
-.remove-book {
+.card:has(.card-status.reading) {
+    box-shadow: 1px 1px 10px rgba(29, 154, 192, 0.774);
+}
+
+.card:has(.card-status.read) {
+    box-shadow: 1px 1px 10px rgba(9, 167, 120, 0.685);
+}
+
+button.remove-book {
     grid-area: 1 / 2;
     width: 30px;
     place-self: end;
     position: relative;
-    left: 20px;
+    top: 5px;
+    left: 15px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+button.remove-book:hover svg {
+    fill: rgb(202, 91, 109);
+}
+
+.remove-book svg{
+    pointer-events: none;
 }
 
 .card-title {
@@ -111,7 +147,10 @@ h1 {
     user-select: none;
 }
 
-
+.card-status:hover {
+    font-weight: bold;
+    font-size: 1.05rem;
+}
 
 .card-status.unread {
     outline:rgba(204, 139, 150, 0.671) 2px solid;
@@ -131,8 +170,6 @@ h1 {
     color: rgb(9, 167, 159);
 }
 
-
-
 .footer {
     background-color: lightslategray;
     display: grid;
@@ -140,7 +177,6 @@ h1 {
     align-items: center;
     font-size: 0.8rem;
     color: lightgray;
-    
 }
 
 .footer a {
@@ -151,7 +187,6 @@ h1 {
     text-decoration: none;
     color: rgb(92, 92, 92);
 }
-
 
 .modal {
     padding: 20px;
