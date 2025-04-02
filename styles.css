@@ -105,7 +105,7 @@ button.remove-book:hover svg {
     fill: rgb(202, 91, 109);
 }
 
-.remove-book svg{
+.remove-book svg {
     pointer-events: none;
 }
 
@@ -114,6 +114,8 @@ button.remove-book:hover svg {
     align-self: center;
     justify-self: left;
     text-align: start;
+    word-wrap: break-word;
+    max-width: 100%;
 }
 
 .card-author {
@@ -124,13 +126,13 @@ button.remove-book:hover svg {
 
 .card-pages {
     grid-area: 4 / 1 / 5 / 2;
-    color:rgba(65, 65, 65, 0.521);
+    color: rgba(65, 65, 65, 0.521);
     font-size: 0.9rem;
 }
 
 .card-pub-date {
     grid-area: 4 / 2 / 5 / 3;
-    color:rgba(65, 65, 65, 0.521);
+    color: rgba(65, 65, 65, 0.521);
     font-size: 0.9rem;
 }
 
@@ -139,7 +141,7 @@ button.remove-book:hover svg {
     place-self: center;
     border-radius: 1px;
     padding: 10px 30px 5px;
-    color:rgb(80, 80, 80);
+    color: rgb(80, 80, 80);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,24 +151,24 @@ button.remove-book:hover svg {
 
 .card-status:hover {
     font-weight: bold;
-    font-size: 1.05rem;
+    /* font-size: 1.05rem; */
 }
 
 .card-status.unread {
-    outline:rgba(204, 139, 150, 0.671) 2px solid;
-    border:rgba(255, 182, 193, 0.671) 4px solid;
+    outline: rgba(204, 139, 150, 0.671) 2px solid;
+    border: rgba(255, 182, 193, 0.671) 4px solid;
     color: rgba(204, 139, 150, 0.671);
 }
 
-.card-status.reading {    
-    outline:rgb(70, 162, 190) 2px solid;
-    border:rgb(84, 199, 235) 4px solid;
+.card-status.reading {
+    outline: rgb(70, 162, 190) 2px solid;
+    border: rgb(84, 199, 235) 4px solid;
     color: rgb(70, 162, 190);
 }
 
 .card-status.read {
-    outline:rgb(9, 167, 159) 2px solid;
-    border:rgb(17, 184, 175) 4px solid;
+    outline: rgb(9, 167, 159) 2px solid;
+    border: rgb(17, 184, 175) 4px solid;
     color: rgb(9, 167, 159);
 }
 
@@ -183,6 +185,7 @@ button.remove-book:hover svg {
     text-decoration: none;
     color: lightgray;
 }
+
 .footer a:hover {
     text-decoration: none;
     color: rgb(92, 92, 92);
@@ -203,7 +206,7 @@ button.remove-book:hover svg {
     margin-bottom: 30px;
 }
 
-.modal-header > h2 {
+.modal-header>h2 {
     margin: 0;
 }
 
@@ -229,7 +232,7 @@ button.remove-book:hover svg {
     margin-top: 10px;
 }
 
-.radio-row p {    
+.radio-row p {
     text-align: center;
 }
 
