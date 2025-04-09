@@ -1,6 +1,6 @@
 # 📚 Library Project
 
-This is my solution to the [Library project](https://www.theodinproject.com/lessons/javascript-library) from **The Odin Project** curriculum. It’s a small web app that lets users manage a personal library – a great way to practice DOM manipulation, object constructors, and event-driven logic.
+This is my version of the [Library project](https://www.theodinproject.com/lessons/javascript-library) from **The Odin Project** curriculum. It’s a small web app that lets users manage a personal library – a great way to practice DOM manipulation, object constructors, and event-driven logic.
 
 ## ✨ Features
 
